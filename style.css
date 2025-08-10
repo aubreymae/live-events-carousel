@@ -48,7 +48,7 @@ body {
 .carousel-track {
   display: flex;
   gap: 20px;
-  padding: 10px;
+  padding: 5px;
   transition: transform var(--transition-speed) ease-in-out;
 }
 
