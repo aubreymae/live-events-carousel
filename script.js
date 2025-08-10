@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cards = track.querySelectorAll(".event-card");
     const cardWidth = `${100 / cardsPerPage}%`;
-    cards.forEach((card) => {
-      card.style.width = cardWidth;
-    });
+    // cards.forEach((card) => {
+    //   card.style.width = cardWidth;
+    // });
 
     createPageNumbers();
     updateCarousel();
@@ -76,14 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = track.querySelectorAll(".event-card");
     if (cards.length === 0) return;
 
-    const cardElement = cards[0];
-    const cardStyle = getComputedStyle(cardElement);
-    const cardWidth = cardElement.offsetWidth;
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const totalTrackWidth = track.scrollWidth;
+    const visibleTrackWidth = track.offsetWidth;
+    const maxOffset = totalTrackWidth - visibleTrackWidth;
 
-    const shiftPerCard = cardWidth + gap;
+    const pageIndex = currentPage - 1;
+    const pageCount = totalPages > 1 ? totalPages - 1 : 1;
 
-    const offset = (currentPage - 1) * cardsPerPage * shiftPerCard;
+    const offset = maxOffset * (pageIndex / pageCount);
+
     track.style.transform = `translateX(-${offset}px)`;
 
     prevButton.disabled = currentPage === 1;
