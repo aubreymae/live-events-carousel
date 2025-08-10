@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cards = track.querySelectorAll(".event-card");
     const cardWidth = `${100 / cardsPerPage}%`;
-    // cards.forEach((card) => {
-    //   card.style.width = cardWidth;
-    // });
+    cards.forEach((card) => {
+      card.style.width = cardWidth;
+    });
 
     createPageNumbers();
     updateCarousel();

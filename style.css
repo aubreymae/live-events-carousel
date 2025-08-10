@@ -47,7 +47,8 @@ body {
 
 .carousel-track {
   display: flex;
-  gap: 16px;
+  gap: 20px;
+  padding: 10px;
   transition: transform var(--transition-speed) ease-in-out;
 }
 
@@ -55,9 +56,7 @@ body {
 .event-card {
   display: flex;
   flex-direction: column;
-  flex: 0 0 calc(100% / cardsPerPage);
   width: 100%;
-  margin: 5px;
   background-color: var(--brand-white);
   border: 1px solid var(--brand-light-gray);
   border-radius: var(--border-radius);
@@ -77,6 +76,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .event-card .card-date {
