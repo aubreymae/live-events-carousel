@@ -1,0 +1,14 @@
+:root {
+  --brand-light-gray: #f3f4f6;
+  --brand-medium-gray: #d1d5db;
+  --brand-dark-gray: #4b5563;
+  --brand-text-primary: #111827;
+  --brand-text-secondary: #6b7280;
+  --brand-white: #ffffff;
+  --brand-blue: #3b82f6;
+
+  --border-radius: 0.5rem;
+  --transition-speed: 0.5s;
+
+  --dcb-widget-width: 1390px;
+}
