@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Card Carousel</title>
+  </head>
+  <body>
+    <main class="events-container">
+      <div class="carousel-viewport">
+        <div class="carousel-track"></div>
+      </div>
+
+      <nav aria-label="Event pagination" class="pagination-controls">
+        <button id="prev-btn" class="arrow-button">
+          <span class="sr-only">Previous page</span>
+          <svg
+            class="w-6 h-6"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
+          </svg>
+        </button>
+
+        <div id="pagination-num"></div>
+
+        <button id="next-btn" class="arrow-button">
+          <span class="sr-only">Next page</span>
+          <svg
+            class="w-6 h-6"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+    </main>
+
+    <!-- Load eventsData first -->
+    <script src="events.js"></script>
+
+    <!-- Then use it in script.js -->
+    <script src="script.js"></script>
+  </body>
+</html>
